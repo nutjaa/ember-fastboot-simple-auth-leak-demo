@@ -2,10 +2,12 @@
 
 module.exports = function(environment) {
   let ENV = {
-    modulePrefix: 'slow-leak-test3',
+    modulePrefix: 'shophil',
     environment,
     rootURL: '/',
     locationType: 'auto',
+    defaultLocale: 'th' ,
+    podModulePrefix: 'shophil/pods',
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
@@ -20,6 +22,16 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
+    },
+
+    fastboot: {
+      hostWhitelist: ['shophil.com', 'www-staging.shophil.com', /^localhost:\d+$/]
+    },
+
+    FB: {
+      skipInit: false,
+      appId: '',
+      version: ''
     }
   };
 
